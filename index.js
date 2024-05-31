@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello from the backend!');
 });
 
-app.get('/api/products/:category', async (req, res) => {
+app.get('/:category', async (req, res) => {
     const category = req.params.category;
     try {
         const products = await fetchHmProducts(category);
